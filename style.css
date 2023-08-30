@@ -72,11 +72,11 @@ form {
     transition: 0.2s ease-in-out;
 }
 
-.search-result:hover img{
+.search-result:hover img {
    opacity: 0.8;
 }
 
-.search-result a{
+.search-result a {
     font-size: 20px;
     text-decoration: none;
     color: #333;
@@ -84,4 +84,18 @@ form {
     padding: 10px;
     text-transform: capitalize;
     
+}
+
+#show-more-button {
+    background-color: #008cba;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    margin: 30px auto;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
 }
