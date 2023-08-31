@@ -39,9 +39,25 @@ async function searchImages() {
         imageWrapper.appendChild(imageLink);
         imageWrapper.appendChild(imageWrapper);
     });  
+
    page++
+
    if(page > 1) {
     showMore.style.display = "block";
    }
 
 }
+
+
+formEl.addEventListener("submit", (event) => {
+    event.preventDefault()
+    page = 1;
+    searchImages()
+
+})
+
+showMore.addEventListener("click", () => {
+    
+    searchImages()
+
+})
