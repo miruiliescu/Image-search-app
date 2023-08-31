@@ -26,16 +26,22 @@ async function searchImages() {
     //map to show images/text one by one
 
     results.map((map) =>{           //push data in template, generate new boxes
-        const imageWrapper = document.createElement("div") //container to hold images
-        imageWrapper.classList.add("search-result")
-        const image = document.createElement("img")
-        image.src = result.urls.small
-        image.alt = result.alt_description
-        const imageLink = document.createElement("a")
-        imageLink.target = "_blank"
-        imageLink.textContent = result.alt_descriptions
+        const imageWrapper = document.createElement("div"); //container to hold images
+        imageWrapper.classList.add("search-result");
+        const image = document.createElement("img");
+        image.src = result.urls.small;
+        image.alt = result.alt_description;
+        const imageLink = document.createElement("a");
+        imageLink.target = "_blank";
+        imageLink.textContent = result.alt_descriptions;
 
-    })  
-   
+        imageWrapper.appendChild(image);
+        imageWrapper.appendChild(imageLink);
+        imageWrapper.appendChild(imageWrapper);
+    });  
+   page++
+   if(page > 1) {
+    showMore.style.display = "block";
+   }
 
 }
