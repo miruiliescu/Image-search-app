@@ -15,8 +15,27 @@ async function searchImages() {
     const response = await fetch(url)
     const data = await response.json()
 
-    
+    //convert json into a variable
 
+    const results = data.results   //store results we are getting from data
+
+    if (page === 1) {
+        searchResults.innerHTML = " "  
+    }
+
+    //map to show images/text one by one
+
+    results.map((map) =>{           //push data in template, generate new boxes
+        const imageWrapper = document.createElement("div") //container to hold images
+        imageWrapper.classList.add("search-result")
+        const image = document.createElement("img")
+        image.src = result.urls.small
+        image.alt = result.alt_description
+        const imageLink = document.createElement("a")
+        imageLink.target = "_blank"
+        imageLink.textContent = result.alt_descriptions
+
+    })  
    
 
 }
